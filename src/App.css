@@ -1,0 +1,458 @@
+/**
+ * Extension CSS Style
+ */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.board {
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #0d1119;
+  overflow: hidden;
+}
+
+.search-bar {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.search-bar input {
+  width: 100%;
+  border-radius: 6px;
+  padding: 8px 11px 8px 50px;
+  box-shadow: 0 0 0 1px #5b6178;
+  color: white;
+  background-color: #131823;
+}
+
+.search-bar .search-item {
+  position: absolute;
+  background-color: #131823;
+  width: 100%;
+}
+
+.search-bar .search-item div {
+  color: white;
+  font-weight: 700;
+  padding: 7px 7px;
+  cursor: pointer;
+  border: 0.5px solid rgb(255, 255, 255);
+}
+
+.search-bar .search-item div:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.search-bar .search-item div:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 11px;
+}
+
+.dish {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dish .dish-name {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dish .dish-name h1 {
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.dish .link {
+  display: flex;
+  gap: 5px;
+}
+
+.method {
+  border-radius: 6px;
+  background-color: #131823;
+  padding: 10px;
+}
+
+.method .body {
+  padding: 10px 20px;
+  background-color: #17cfc4;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.method .body .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.method .body .title h1 {
+  font-weight: 700;
+  color: #0d1119;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #0d1119;
+}
+
+.method .body button {
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #1d2a43;
+  padding: 12px 0;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.method .body button:hover {
+  color: rgb(209, 250, 229);
+  background-color: #1d2a43d7;
+}
+
+.info {
+  padding: 13px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 6px;
+  background-color: #131823;
+}
+
+.info .card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.info .card .descript {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .card .descript .title {
+  color: rgb(113, 133, 170);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.info .card .descript .nomal {
+  font-weight: 500;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.flex-gap {
+  display: flex;
+  gap: 4px;
+}
+
+.green {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(136.39deg, #2bf1e5 3.18%, #40e33d 102.04%);
+}
+
+.red {
+  color: #fb2047;
+}
+
+.orange {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(136.39deg, #ffbf43 3.18%, #ff4869 102.04%);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.white {
+  font-weight: 500;
+  color: white;
+}
+
+.icon-button {
+  border-radius: 100%;
+  padding: 7px;
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 150ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-hover {
+  background-color: #c0d3f803;
+}
+
+.back-hover-none {
+  background-color: #171f2f;
+}
+
+/**
+ * Full Recipe Page CSS Style
+ */
+
+.full {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0d1119;
+  position: relative;
+}
+
+.dish-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  background-color: #131823;
+  margin: 32px;
+  z-index: 1;
+}
+
+.body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.panel {
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+  overflow: auto;
+}
+
+.left-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-list .list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 32px;
+}
+
+.left-list button {
+  border-radius: 6px;
+  padding: 7px 75px;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.pagenation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.pagenation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.right-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+}
+
+.right-description .description {
+  background-color: #17cfc4;
+  padding: 32px;
+  width: 70%;
+  border-radius: 6px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.right-description img {
+  border-radius: 6px;
+}
+
+.right-description .information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.information .info-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+
+.info-row .full-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.footer-icons .link {
+  display: flex;
+  gap: 16px;
+}
+
+/**
+ * Modal CSS Style
+ */
+
+.modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+}
+
+.modal-container {
+  position: absolute;
+  min-width: 50rem;
+  max-width: 55rem;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px;
+}
+
+.modal-body {
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 40px;
+}
+
+.info-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.col {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.col.descript {
+  grid-template-columns: 2fr 6fr;
+}
+
+.col label {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.col input {
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 17px;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.modal-body button {
+  padding: 10px 45px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
